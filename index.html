@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel by Tarah | Client Questionnaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bellefair&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Abel', sans-serif;
+            background-color: #f1ebe1;
+        }
+        .text-teal {
+            color: #20A2A2;
+        }
+        .bg-dark-green {
+            background-color: #7a9c91;
+        }
+        .border-teal {
+            border-color: #20A2A2;
+        }
+        .ring-teal {
+            --tw-ring-color: #20A2A2;
+        }
+        .ring-inset.ring-teal:focus {
+            --tw-ring-inset: inset;
+        }
+        input, select, textarea {
+            color: #20A2A2;
+            background-color: transparent;
+            border-bottom: 2px solid #20A2A2;
+            transition: all 0.3s ease-in-out;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-bottom: 2px solid #7a9c91;
+        }
+        .placeholder-teal::placeholder {
+            color: #20a2a290;
+        }
+        .font-bellefair {
+            font-family: 'Bellefair', serif;
+        }
+    </style>
+</head>
+<body class="bg-[#f1ebe1] flex items-center justify-center min-h-screen py-10 px-4">
+    <div class="max-w-4xl w-full bg-[#f1ebe1] shadow-lg rounded-2xl p-8 md:p-12 border-4 border-[#7a9c91] space-y-10">
+        <!-- Logo and Header Section -->
+        <div class="flex flex-col items-center justify-center text-center">
+            <!-- The logo source has been updated to your file. A fallback image is now included. -->
+            <img src="logo.png" onerror="this.onerror=null;this.src='https://placehold.co/250x150/f1ebe1/20a2a2?text=Travel+by+Tarah'" alt="Travel by Tarah Logo" class="max-w-[250px] mb-4">
+            <h1 class="font-bellefair text-3xl md:text-5xl font-extralight text-[#20A2A2] mb-2 tracking-wide">Client Discovery Questionnaire</h1>
+            <p class="text-lg text-[#7a9c91] font-light italic max-w-2xl">
+                Thank you for choosing Travel by Tarah. This questionnaire is designed to help me understand your unique preferences and desires to craft a truly bespoke luxury travel experience.
+            </p>
+        </div>
+
+        <!-- Form Section -->
+        <!-- The action attribute now points to your unique Formspree URL. -->
+        <form id="travelForm" action="https://formspree.io/f/xrbldkqp" method="POST" class="space-y-8 text-[#20A2A2]">
+            <!-- Personal Information -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="fullName" class="block text-sm font-medium mb-1">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" class="w-full p-2 placeholder-teal" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                    <input type="email" id="email" name="email" placeholder="jane.doe@example.com" class="w-full p-2 placeholder-teal" required>
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium mb-1">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" class="w-full p-2 placeholder-teal">
+                </div>
+                <div>
+                    <label for="preferredContact" class="block text-sm font-medium mb-1">Preferred Method of Contact</label>
+                    <select id="preferredContact" name="preferredContact" class="w-full p-2 placeholder-teal">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- What is Luxury to you? -->
+            <div class="space-y-4">
+                <label for="luxuryDefinition" class="block text-sm font-medium mb-1">What does "luxury" mean to you in the context of travel? (e.g., personalized service, unique experiences, exclusive access, total privacy, wellness)</label>
+                <textarea id="luxuryDefinition" name="luxuryDefinition" rows="4" placeholder="Luxury to me is..." class="w-full p-3 placeholder-teal rounded-lg border-2 border-teal"></textarea>
+            </div>
+
+            <!-- Travel Style & Preferences -->
+            <div class="space-y-4">
+                <label class="block text-sm font-medium mb-2">What is your ideal travel style?</label>
+                <div class="flex flex-wrap gap-4 text-[#7a9c91]">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="travelStyle" value="adventure" class="form-checkbox text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Adventure & Exploration</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="travelStyle" value="relaxation" class="form-checkbox text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Pure Relaxation</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="travelStyle" value="cultural" class="form-checkbox text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Cultural Immersion</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="travelStyle" value="culinary" class="form-checkbox text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Culinary Journey</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="travelStyle" value="wellness" class="form-checkbox text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Wellness & Spa</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="travelStyle" value="tennis_wellness" class="form-checkbox text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Tennis & Wellness Package</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Destination, Group/Solo, Accommodations, and Budget -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div>
+                    <label for="destination" class="block text-sm font-medium mb-1">Preferred Destination or Region</label>
+                    <input type="text" id="destination" name="destination" placeholder="Italy, Maldives, African Safari..." class="w-full p-2 placeholder-teal">
+                </div>
+                <div>
+                    <label for="travelCompanions" class="block text-sm font-medium mb-1">Travel Companions</label>
+                    <select id="travelCompanions" name="travelCompanions" class="w-full p-2 placeholder-teal">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="solo">Solo</option>
+                        <option value="couple">Couple</option>
+                        <option value="family">Family</option>
+                        <option value="group">Group</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="accommodations" class="block text-sm font-medium mb-1">Accommodation Level</label>
+                    <select id="accommodations" name="accommodations" class="w-full p-2 placeholder-teal">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="luxury">Luxury hotels (five star and other luxury establishments)</option>
+                        <option value="first_class">First class hotels and inns (four star and similar)</option>
+                        <option value="tourist_class">Tourist class hotels and inns (three star and similar)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="budget" class="block text-sm font-medium mb-1">Estimated Budget per Person</label>
+                    <select id="budget" name="budget" class="w-full p-2 placeholder-teal">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="5-10k">$5,000 - $10,000+</option>
+                        <option value="10-25k">$10,000 - $25,000+</option>
+                        <option value="25k+">$25,000+</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Wellness, Resorts, Cruises -->
+            <div class="space-y-4">
+                <label class="block text-sm font-medium mb-2">Which wellness activities are you interested in?</label>
+                <div class="flex flex-wrap gap-4 text-[#7a9c91]">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="wellness" value="spa" class="form-checkbox text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Spa & Massage Treatments</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="wellness" value="yoga" class="form-checkbox text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Yoga & Meditation</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="wellness" value="fitness" class="form-checkbox text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Private Fitness & Training</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="wellness" value="retreat" class="form-checkbox text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Wellness Retreats</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <label class="block text-sm font-medium mb-2">What's your preference?</label>
+                <div class="flex flex-wrap gap-4 text-[#7a9c91]">
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="travelType" value="resort" class="form-radio text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Resort Stays</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="travelType" value="cruise" class="form-radio text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Cruises</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="travelType" value="other" class="form-radio text-teal rounded-full focus:ring-2 focus:ring-teal bg-transparent border-teal">
+                        <span>Other (please specify below)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Additional Details -->
+            <div class="space-y-4">
+                <label for="additionalDetails" class="block text-sm font-medium mb-1">Any additional details or special requests we should know about?</label>
+                <textarea id="additionalDetails" name="additionalDetails" rows="4" placeholder="For example: 'I am a vegetarian,' 'I require accessibility features,' or 'I'm celebrating my anniversary.'" class="w-full p-3 placeholder-teal rounded-lg border-2 border-teal"></textarea>
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="flex justify-center">
+                <button type="submit" class="w-full md:w-auto px-8 py-3 text-white font-medium rounded-full bg-[#20A2A2] hover:bg-[#7a9c91] transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#7a9c91] focus:ring-offset-2 focus:ring-offset-[#f1ebe1]">
+                    Submit Questionnaire
+                </button>
+            </div>
+        </form>
+
+        <!-- Message Box for Success -->
+        <div id="successMessage" class="hidden fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-50">
+            <div class="bg-[#f1ebe1] p-8 rounded-lg shadow-xl border-4 border-[#7a9c91] max-w-sm w-full text-center">
+                <h3 class="font-bellefair text-3xl text-[#20A2A2] mb-4">Submission Successful!</h3>
+                <p class="text-lg text-[#7a9c91]">Thank you for submitting your questionnaire. I'll be in touch soon to start planning your perfect trip.</p>
+                <button onclick="document.getElementById('successMessage').classList.add('hidden')" class="mt-6 px-6 py-2 bg-[#20A2A2] text-white rounded-full hover:bg-[#7a9c91] transition-all duration-300">Close</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
